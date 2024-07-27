@@ -1,0 +1,277 @@
+body {
+  font-family: poppins;
+  background-color: #121212;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  flex-direction: column;
+  padding: 20px;
+  box-sizing: border-box;
+  background: #2ba2da;
+  background-size: 400% 400%;
+  animation: gradientAnimation 10s ease infinite;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.container {
+  background-color: rgba(30, 30, 30, 0.8);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  max-width: 500px;
+  width: 100%;
+  transition: opacity 0.5s, visibility 0.5s;
+}
+
+.container.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 2em;
+  color: #2ba2da;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+input[type="text"],
+input[type="radio"] {
+  padding: 15px;
+  font-family: poppins;
+  width: calc(100% - 30px);
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  background-color: rgba(30, 30, 30, 0.8);
+  color: #ffffff;
+  box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.error-message {
+  color: #ff5722;
+  font-size: 0.9em;
+  margin-bottom: 10px;
+  display: none;
+}
+
+.gender-selection {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.gender-selection input[type="radio"] {
+  display: none;
+}
+
+.gender-selection label {
+  cursor: pointer;
+  padding: 10px 20px;
+  background-color: #2a2a2a;
+  border-radius: 5px;
+  font-size: 1em;
+  color: #ffffff;
+  margin: 0 10px;
+  transition: background-color 0.3s, transform 0.3s;
+  flex: 1;
+  text-align: center;
+}
+
+.gender-selection input[type="radio"]:checked+label {
+  background-color: #2183c0;
+  color: #ffffff;
+  transform: scale(1.1);
+}
+
+button {
+  padding: 15px 25px;
+  font-family: poppins;
+  background-color: #2183c0;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  width: calc(100% - 30px);
+  max-width: 200px;
+}
+
+button:hover {
+  background-color: #7cacc4;
+  transform: scale(1.05);
+}
+
+.result-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s;
+  z-index: 999;
+  flex-direction: column;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.result-container.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+.result-box {
+  background-color: rgba(30, 30, 30, 0.8);
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 20px;
+}
+
+#result {
+  font-size: 1em;
+  color: #2183c0;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#jodoh-name {
+  font-size: 2.5em;
+  font-weight: bold;
+  color: #2183c0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+a {
+  text-decoration: none;
+  color: #ffcc00;
+}
+
+footer {
+  background-color: rgba(20, 20, 20, 0.5);
+  color: #ffffff;
+  padding: 10px 0;
+  width: 100%;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.footer-content p {
+  margin: 5px 0;
+  font-size: 0.8em;
+}
+
+@media (max-width: 600px) {
+
+  .container,
+  .result-box {
+    width: 90%;
+    padding: 20px;
+  }
+
+  button {
+    width: calc(100% - 30px);
+    max-width: none;
+  }
+
+  .gender-selection label {
+    flex: 1;
+  }
+}
+
+/* Animasi Hati */
+.love-animation {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.heart {
+  position: absolute;
+  bottom: 0;
+  /* Awal dari bagian bawah kotak hasil */
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  width: 20px;
+  height: 20px;
+  background-color: #ff0000;
+  animation: love 5s linear infinite;
+}
+
+.heart::before,
+.heart::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #ff0000;
+  border-radius: 50%;
+}
+
+.heart::before {
+  top: -10px;
+  left: 0;
+}
+
+.heart::after {
+  top: 0;
+  left: -10px;
+}
+
+@keyframes love {
+  0% {
+    transform: translateY(0) rotate(45deg);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(-100vh) rotate(45deg);
+    opacity: 0;
+  }
+}

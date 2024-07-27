@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="gender.png" type="image/x-icon">
+  <title>Cek Pasangan</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="container" id="main-container">
+
+    <h1>CEK JODOH</h1>
+    <img src="arkanara.png" alt="logo arkanara" width="100" height="100">
+    <P>Penasaran siapa jodoh yang cocok buat kamu?</P>
+    <p>Langsung aja cek di sini</p>
+
+    <form id="jodohForm">
+      <input type="text" id="yourName" placeholder="Masukkan nama kamu">
+      <small class="error-message" id="nameError"></small>
+
+      <p>Kamu cewek apa cowok?</p>
+
+      <div class="gender-selection">
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Cowok</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Cewek</label>
+      </div>
+
+      <small class="error-message" id="genderError"></small>
+      <button type="button" id="checkButton">Gass Cek !</button>
+    </form>
+  </div>
+
+  <div id="result-container" class="result-container">
+    <div class="result-box" id="result-box">
+      <div class="love-animation"></div>
+      <h1>HASIL CEK !</h1>
+      </br>
+      <div id="result" style="text-transform: uppercase;"></div>
+      <div id="jodoh-name"></div>
+      <br>
+      <p>Tunggu apa lagi? namanya sudah kamu dapatkan, cepat ajak NIKAH... wkwk kiw kiw</p>
+      <button id="resetButton">Cek Ulang</button>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-content">
+      <p>Hanya untuk bersenag-senang jangan BAPER, Jangan lupa follow ya gays.. klik di sini --> <a
+          href="https://www.instagram.com/im.afn_/">im.afn_</a></p>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+
+</html>
